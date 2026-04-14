@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhiya Ravikumar</title>
+    <link rel="shortcut icon" href="images/LogoC.jpeg" type="image/x-icon">
+    <style>
+        /* RESET */
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* BODY */
+        body {
+            background: #fafeec;
+            color: #0f172a;
+            scroll-behavior: smooth;
+        }
+
+        /* HERO */
+        .hero {
+            height: 98vh;
+            background: url("images/oopsBG.jpeg") no-repeat center center/cover;
+            color: white;
+            margin: 0px;
+            padding-top: 50px;
+        }
+
+
+        .hero h1 {
+            font-size: 70px;
+            color: rgb(254, 99, 99);
+            text-align: center;
+            font-family: serif;
+            text-shadow: 3px 2px 4px #5e2f2f;
+        }
+
+        /* BACK BUTTON */
+        .back {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.352);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        .back:hover {
+            transform: scale(1.08);
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 80px 15%;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-family: serif;
+        }
+
+        .about p {
+            line-height: 1.7;
+            padding-top: 20px;
+            font-size: 18px;
+            color: #322f5ce6;
+            font-family: cursive;
+            text-align: justify;
+            padding-left: 9%;
+            padding-right: 9%;
+        }
+
+        /* TOPICS */
+        .topics {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .topics h1 {
+            font-size: 55px;
+            margin-bottom: 40px;
+            font-family: serif;
+        }
+
+        /* CIRCLE CONTAINER */
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: nowrap;
+            padding-top: 40px;
+        }
+
+        /* CIRCLE */
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #85f485, #ff889a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(66, 52, 52);
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 22px;
+            transition: 0.4s;
+            box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.8), -2px -2px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .circle:hover {
+            transform: translateY(-10px) scale(1.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ACTIVE */
+        .circle.active {
+            background: linear-gradient(135deg, #52ff52, #ff556e);
+        }
+
+            .circle:hover {
+                transform: translateY(-10px) scale(1.08);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            }
+
+            /* CONTENT BOX */
+            .content-box {
+                margin-top: 60px;
+                max-width: 950px;
+                margin-left: auto;
+                margin-right: auto;
+                background: rgba(163, 204, 228, 0.292);
+                backdrop-filter: blur(12px);
+                padding: 35px;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                animation: fadeUp 0.6s ease;
+            }
+
+            /* HEAD */
+            .content-box h2 {
+                font-size: 33px;
+                margin-bottom: 15px;
+            }
+
+            /* LABEL */
+            .label {
+                margin-top: 18px;
+                font-weight: bold;
+                color: #2f29ac;
+            }
+
+            /* TEXT */
+            .content-box p {
+                margin-top: 8px;
+                line-height: 1.7;
+                color: #313842;
+                text-align: justify;
+            }
+
+            /* TAG */
+            .tag {
+                display: inline-block;
+                margin-top: 6px;
+                margin-right: 6px;
+                background: #6d707a;
+                color: #e7e7e7;
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+            }
+
+            /* OUTPUT */
+            .output {
+                margin-top: 12px;
+                background: #02061787;
+                color: #fafafacc;
+                padding: 12px;
+                border-radius: 8px;
+                font-family: monospace;
+                font-weight: bold;
+            }
+
+            /* BUTTON */
+            .btn {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 22px;
+                background: linear-gradient(to right, #f43f5e, #ec4899);
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                border-radius: 25px;
+                transition: 0.3s;
+            }
+
+            .btn:hover {
+                transform: scale(1.05);
+                background:  #ffafc9;
+            }
+
+            /* ANIMATIONS */
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* MOBILE */
+            @media(max-width:768px) {
+                .circle-container {
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+
+                .hero h1 {
+                    font-size: 40px;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="back" onclick="history.back()">⬅ Back To Project Section</div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h1>Object Oriented </h1>
+            <h1>Programming</h1>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>The Project</h2>
+        <p>
+            This project reflects my in-depth understanding of Object-Oriented Programming in Java,
+            where I moved beyond basic implementations to build more dynamic and interactive systems.
+            Each concept was carefully enhanced with optimized logic, real-time behavior, and practical
+            problem-solving approaches rather than static examples.
+
+            By experimenting with different design patterns and execution flows, I focused on making the
+            code more flexible, reusable, and closer to real-world application scenarios. These projects
+            helped me strengthen my ability to structure programs efficiently, manage data securely,
+            and implement scalable solutions using core OOPS principles.
+
+            Overall, this work demonstrates not only my technical knowledge but also my ability to think
+            critically, improve standard approaches, and transform foundational concepts into meaningful,
+            functional implementations.
+        </p>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="topics">
+        <h1>TOPICS</h1>
+        <div class="circle-container">
+
+            <div class="circle" onclick="show(1)">Class</div>
+            <div class="circle" onclick="show(2)">Inherit</div>
+            <div class="circle" onclick="show(3)">Poly</div>
+            <div class="circle" onclick="show(4)">Encap</div>
+            <div class="circle" onclick="show(5)">Abstract</div>
+        </div>
+
+        <!-- CONTENT -->
+        <div id="content" class="content-box">
+
+            <h3>What I Gained</h3>
+            <p>
+                Through these OOPS projects, I strengthened my logical thinking,
+                learned to design scalable systems, and improved real-world problem solving.
+            </p>
+
+            <div class="output">
+                Logic → Structure → Clean Code → Real Applications
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function show(n) {
+
+            let circles = document.querySelectorAll(".circle");
+            circles.forEach(c => c.classList.remove("active"));
+            circles[n - 1].classList.add("active");
+
+            let content = document.getElementById("content");
+
+            if (n == 1) {
+                content.innerHTML = `
+<div class="card">
+
+<h2>Interactive OOP Quiz Engine</h2>
+
+<div class="label">What I Engineered</div>
+<p>
+I designed an interactive command-line quiz application that simulates a real-time
+question-and-answer system using Object-Oriented Programming principles.
+Instead of static outputs, the system dynamically handles user input,
+evaluates responses, and generates personalized feedback based on performance.
+</p>
+
+<div class="label">How I Built</div>
+<p>
+I created a custom class structure where each quiz question is treated as an object
+containing both the prompt and the correct answer. By storing these objects inside an array,
+I enabled scalable question management and efficient iteration using loops.
+The program uses user input handling through Scanner and applies conditional logic
+to validate answers and calculate scores dynamically.
+</p>
+
+<div class="label">Concepts Applied</div>
+<span class="tag">Class & Object Design</span>
+<span class="tag">Array of Objects</span>
+<span class="tag">Loops (Iteration)</span>
+<span class="tag">Conditional Logic</span>
+<span class="tag">User Interaction</span>
+
+<div class="label">Key Features</div>
+<p>
+• Dynamic question handling using object arrays  
+• Real-time answer validation  
+• Score calculation with performance feedback  
+• Retry functionality using loop control  
+• Case-insensitive input comparison  
+</p>
+
+<div class="label">Output Behavior</div>
+<div class="output">
+User Answers → Evaluated → Score Generated → Feedback Displayed → Retry Option
+</div>
+
+<div class="label">What I Gained</div>
+<p>
+Through this project, I strengthened my understanding of how objects can be used to model
+real-world entities in a program. I also improved my ability to manage user interaction,
+control program flow, and build reusable and scalable logic structures.
+This project helped me move from theoretical understanding of OOP concepts
+to practical implementation.
+</p>
+
+<a href="https://github.com/sandhiya334/OOPs-Projects/blob/main/OOP_Quiz.java" target="_blank" class="btn">
+Explore Source Code →
+</a>
+
+
+        `;
+            }
+
+            if (n == 2) {
+                content.innerHTML = `
+<div class="card">
+
+<h2>Employee Payroll System (Inheritance Driven)</h2>
+
+<div class="label">What I Engineered</div>
+<p>
+I developed a dynamic Employee Payroll Management System that simulates real-world
+salary processing using Object-Oriented Programming principles. Instead of using
+a single rigid structure, I designed a flexible system where different types of
+employees (Full-Time, Part-Time, Intern) are handled through a unified architecture
+while maintaining their unique salary behaviors.
+</p>
+
+<div class="label">How I Built</div>
+<p>
+I created a base class <b>Employee</b> that defines common attributes such as name,
+ID, and type. Then, I extended this class into specialized child classes like
+<b>FullTimeEmployee</b>, <b>PartTimeEmployee</b>, and <b>Intern</b>, each overriding
+the salary calculation method to implement their own logic.
+
+Using an <b>ArrayList</b>, I dynamically stored employee objects and processed them
+through a menu-driven system. The application uses user input to create and manage
+different employee types in real-time, ensuring scalability and flexibility.
+</p>
+
+<div class="label">Concepts Applied</div>
+<span class="tag">Inheritance</span>
+<span class="tag">Method Overriding</span>
+<span class="tag">Dynamic Polymorphism</span>
+<span class="tag">ArrayList (Dynamic Storage)</span>
+<span class="tag">User Input Handling</span>
+
+<div class="label">Key Features</div>
+<p>
+• Multiple employee types with customized salary logic  
+• Dynamic object creation at runtime  
+• Menu-driven interactive system  
+• Unique ID generation for each employee  
+• Scalable design supporting new roles  
+</p>
+
+<div class="label">Tricks Used</div>
+<p>
+I used method overriding to ensure each employee type calculates salary differently
+while still being accessed through a common reference. This allows runtime
+polymorphism, making the system flexible and easy to extend. I also used a loop-based
+menu system to keep the application running interactively until the user exits.
+</p>
+
+<div class="label">Output Behavior</div>
+<div class="output">
+User Input → Object Created → Stored in List → Salary Calculated → Displayed Dynamically
+</div>
+
+<div class="label">What I Gained</div>
+<p>
+Through this project, I gained a deeper understanding of how inheritance can be used
+to design scalable and maintainable systems. I learned how to structure real-world
+entities into class hierarchies and implement dynamic behavior using method overriding.
+This project also improved my ability to handle user-driven applications and manage
+data efficiently using collections.
+</p>
+
+<a href="https://github.com/sandhiya334/OOPs-Projects/tree/main/Employee%20Pay%20Roll%20Calculation" target="_blank" class="btn">
+Explore Source Code →
+</a>
+
+</div>       `;
+            }
+
+            if (n == 3) {
+                content.innerHTML = `
+<div class="card">
+
+<h2>Dynamic Shape Area Engine (Polymorphism Based)</h2>
+
+<div class="label">What I Engineered</div>
+<p>
+I developed a dynamic shape calculation system that computes the area of multiple
+geometric shapes using a unified interface. Instead of writing separate programs
+for each shape, I built a flexible engine where different shapes respond differently
+to the same method call, demonstrating true runtime polymorphism.
+</p>
+
+<div class="label">How I Built</div>
+<p>
+I designed an abstract base class <b>Shapes</b> that defines common methods for
+area calculation and shape information. Then, I created specialized classes such as
+<b>Circle</b>, <b>Square</b>, <b>Rectangle</b>, and <b>Triangle</b> that extend this
+base class and override the methods with their own implementations.
+
+At runtime, I used a single reference variable to dynamically assign different
+shape objects based on user input. This allows the program to execute different
+logic paths while maintaining a consistent structure.
+</p>
+
+<div class="label">Concepts Applied</div>
+<span class="tag">Polymorphism (Runtime)</span>
+<span class="tag">Method Overriding</span>
+<span class="tag">Abstraction</span>
+<span class="tag">Dynamic Binding</span>
+<span class="tag">User Input Handling</span>
+
+<div class="label">Key Features</div>
+<p>
+• Single interface for multiple shape calculations  
+• Dynamic object creation based on user selection  
+• Clean and reusable class hierarchy  
+• Menu-driven interactive system  
+• Supports multiple geometric shapes  
+</p>
+
+<div class="label">Tricks Used</div>
+<p>
+I used a single parent reference (<b>Shapes shape</b>) to point to different child
+objects at runtime, allowing the same method call to execute different logic.
+This demonstrates dynamic binding and avoids repetitive code.
+I also structured the program to continuously accept user input using loops,
+making the system interactive.
+</p>
+
+<div class="label">Output Behavior</div>
+<div class="output">
+User Selects Shape → Object Created → Method Overridden → Area Calculated → Result Displayed
+</div>
+
+<div class="label">What I Gained</div>
+<p>
+This project helped me deeply understand how polymorphism enables flexibility
+in program design. I learned how to write scalable code where new shapes can be
+added without modifying existing logic. It also improved my ability to use
+abstraction to simplify complex systems while maintaining clean architecture.
+</p>
+
+<a href="https://github.com/sandhiya334/OOPs-Projects/blob/main/Shapes_Area_Calculator.java" target="_blank" class="btn">
+Explore Source Code →
+</a>
+
+</div>       `;
+            }
+
+            if (n == 4) {
+                content.innerHTML = `
+<div class="card">
+
+<h2>Secure Banking System (Encapsulation Driven)</h2>
+
+<div class="label">What I Engineered</div>
+<p>
+I built a secure banking system that simulates real-world account management
+by protecting sensitive data such as account number, holder details, and balance.
+Instead of allowing direct access, the system ensures that all operations are
+performed through controlled methods, maintaining data integrity and security.
+</p>
+
+<div class="label">How I Built</div>
+<p>
+I designed a class <b>bank_acc</b> where all critical data members are declared
+as <b>private</b> to prevent unauthorized access. Public methods like
+<b>Deposit()</b>, <b>Withdraw()</b>, and <b>Display()</b> are used to interact
+with the account safely.
+
+Validation logic is implemented inside these methods to ensure correct transactions,
+such as preventing negative deposits and restricting withdrawals beyond the available balance.
+</p>
+
+<div class="label">Concepts Applied</div>
+<span class="tag">Encapsulation</span>
+<span class="tag">Data Hiding</span>
+<span class="tag">Access Control</span>
+<span class="tag">Validation Logic</span>
+<span class="tag">Secure Method Design</span>
+
+<div class="label">Key Features</div>
+<p>
+• Private data members to protect sensitive information  
+• Controlled deposit and withdrawal operations  
+• Input validation for safe transactions  
+• Real-time balance updates  
+• Clean and secure class structure  
+</p>
+
+<div class="label">Tricks Used</div>
+<p>
+I implemented strict validation inside transaction methods instead of relying
+on external checks. This ensures that even if incorrect input is given,
+the system handles it safely without corrupting data.
+By restricting direct variable access, I enforced a strong security layer
+within the application.
+</p>
+
+<div class="label">Output Behavior</div>
+<div class="output">
+User Action → Validated → Balance Updated → Secure Output Displayed
+</div>
+
+<div class="label">What I Gained</div>
+<p>
+This project helped me understand the importance of protecting data in software systems.
+I learned how encapsulation improves reliability, prevents unintended modifications,
+and ensures that all operations follow defined rules. It also strengthened my ability
+to design secure and maintainable code structures.
+</p>
+
+<a href="https://github.com/sandhiya334/OOPs-Projects/tree/main/banking" target="_blank" class="btn">
+Explore Source Code →
+</a>
+
+</div>       `;
+            }
+
+            if (n == 5) {
+                content.innerHTML = `<!-- ABSTRACTION -->
+<div class="card">
+<h2>Abstraction Driven Food Ordering System</h2>
+
+<div class="label">What I Engineered</div>
+<p>
+This project demonstrates abstraction by separating the food ordering workflow 
+into independent logical layers. Instead of directly handling all operations in 
+a single flow, I designed abstract structures for food preparation and payment 
+processing, allowing flexible extension and modular design.
+</p>
+
+<div class="label">How I Built</div>
+<p>
+I created an abstract class <b>FoodItems</b> to define a common structure for all food 
+types, ensuring each item implements its own preparation logic. Similarly, an 
+abstract <b>Payment</b> class was used to enforce multiple payment strategies 
+(Card, UPI, Cash), allowing runtime selection of payment methods.
+</p>
+
+<div class="label">Tricks Used</div>
+<span class="tag">Abstract Classes</span>
+<span class="tag">Runtime Object Creation</span>
+<span class="tag">Loose Coupling</span>
+<span class="tag">Strategy Pattern Concept</span>
+
+<div class="label">Key Features</div>
+<p>
+✔ Dynamic menu selection using user input  
+✔ Real-time order processing with multiple items  
+✔ Flexible payment system using abstraction  
+✔ Clean separation between business logic and execution flow  
+</p>
+
+<div class="label">Output Behavior</div>
+<div class="output">
+Select Items → Add to Order → Process → Choose Payment → Complete Transaction
+</div>
+
+<div class="label">What I Gained</div>
+<p>
+Through this project, I understood how abstraction helps in designing scalable 
+systems. I learned to build loosely coupled architectures where new food items 
+or payment methods can be added without modifying existing code.
+</p>
+
+<div class="label">Reference</div>
+<p>
+Code implemented based on real-world food ordering flow and Java OOPS abstraction principles.
+</p>
+
+<a href="https://github.com/sandhiya334/OOPs-Projects/blob/main/Online_food_Vending_System.java" target="_blank" class="btn">View Code</a>
+</div>       `;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

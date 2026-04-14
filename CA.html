@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhiya Ravikumar</title>
+    <link rel="shortcut icon" href="images/LogoC.jpeg" type="image/x-icon">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #eef2ff, #fdf2f8, #ecfeff, #f0fdf4);
+            background-size: 400% 400%;
+            animation: bgMove 15s ease infinite;
+            color: #0f172a;
+        }
+
+        /* BACK BUTTON */
+        .back {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 10px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .back:hover {
+            transform: scale(1.08);
+            background: white;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url("images/botBG.jpg") no-repeat center center/cover;
+            color: white;
+            margin: 0px;
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            font-family: cursive;
+            color: black;
+            text-align: center;
+            padding-top: 150px;
+            max-width: 45%;
+            margin-left: 100px;
+            text-shadow: 3px 3px 8px rgb(228, 24, 24);
+        }
+
+        .hero h1:hover {
+            font-size: 6.2rem;
+            text-shadow: 4px 4px 8px rgb(41, 24, 228);
+        }
+
+        /* CONTAINER */
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255, 0, 76, 0.148);
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 3px 30px 5px rgb(0, 0, 0);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 3px 30px 30px rgba(0, 0, 0, 0.699);
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            font-size: 50px;
+            margin: 35px 0 10px;
+            color: rgb(123, 24, 95);
+            font-weight: bold;
+            text-align: center;
+            font-family: serif;
+        }
+
+        #build {
+
+            text-align: justify;
+            font-family: cursive;
+            padding-top: 20px;
+            line-height: 2.0;
+            font-size: 22px;
+            color: #1e4172fd;
+            padding-left: 220px;
+        }
+
+        /* TEXT */
+        p {
+            text-align: justify;
+            font-family: cursive;
+            padding-top: 20px;
+            line-height: 1.9;
+            font-size: 20px;
+            color: #1e293bdd;
+            padding-left: 120px;
+            padding-right: 140px;
+        }
+
+        .out {
+            background: #fdfdd43c;
+            color: #1d4753;
+            text-align: justify;
+            padding: 25px;
+            margin-left: 120px;
+            margin-right: 350px;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-size: 18px;
+            font-family: monospace;
+            box-shadow: 2px 4px 15px rgb(112, 29, 53);
+            transition: 0.3s;
+        }
+
+        /* FLOW OUTPUT */
+        .output {
+            background: #2c2e353c;
+            color: #000000;
+            padding: 18px;
+            font-size: 18px;
+            text-shadow: 2px 2px 5px white;
+            margin-left: 160px;
+            max-width: 70%;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-family: monospace;
+            box-shadow: 2px 4px 15px rgb(155, 42, 74);
+            transition: 0.3s;
+        }
+
+        .output:hover {
+            transform: scale(1.02);
+            box-shadow: 2px 5px 25px black;
+        }
+
+
+        /* TAGS */
+        .tag {
+            display: inline-block;
+            margin: 6px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FEATURES GRID */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin-top: 40px;
+            font-size: 17px;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.511);
+            backdrop-filter: blur(10px);
+            padding: 18px;
+            border-radius: 15px;
+            border-left: 5px solid #325a18;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-box::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.831), transparent);
+            transition: 2.6s;
+        }
+
+        .feature-box:hover::before {
+            left: 100%;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.742), -2px -5px 10px rgba(0, 0, 0, 0.742);
+        }
+
+        /* FLOW STEPS */
+        .flow-step {
+            margin-top: 55px;
+            padding-left: 300px;
+            border-radius: 12px;
+            transition: 0.3s;
+            font-size: 21px;
+            font-family: monospace;
+            line-height: 0.7cm;
+            text-align: justify;
+        }
+
+
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 28px;
+            background: linear-gradient(to right, #6cf899, #ff47a3);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        video {
+            border-radius: 20px;
+            border: 10px rgb(71, 38, 49) double;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #1a6b34d0, #581637c0);
+            color: white;
+        }
+
+        /* ANIMATIONS */
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back" onclick="history.back()">⬅ Back</div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Campus Assist AI</h1>
+    </section>
+
+    <div class="container">
+        <div class="card">
+
+            <h2 style="font-size:75px;font-family: serif;color: #633621;">Smart College Chatbot System</h2>
+
+            <!-- WHAT I BUILT -->
+            <div class="section-title">🚀 What I Built</div>
+            <p>
+                I engineered a complete AI-powered campus assistant platform that acts as a
+                digital support system for students. This chatbot is not just a simple Q&A tool —
+                it behaves like a virtual college help desk.
+                The system intelligently understands user queries and provides accurate responses
+                related to college information such as admissions, fees, placements, departments,
+                hostel facilities, and more. It integrates AI, backend logic, and database systems
+                to simulate a real-world student support ecosystem.
+                Additionally, I built a full user authentication system, admin dashboard, and
+                query escalation mechanism — making it a complete end-to-end application
+                rather than a basic chatbot.
+            </p>
+
+            <!-- WHY I BUILT -->
+            <div class="section-title">🎯 Why I Built This</div>
+            <p>
+                In real college environments, students often struggle to get quick answers.
+                They depend on office staff, websites, or seniors — which can be slow, confusing,
+                or unavailable.
+            </p>
+
+            <p>
+                I wanted to solve this real-world problem by creating an intelligent assistant
+                that is:
+            </p>
+
+            <ul id="build">
+                <li>Available 24/7</li>
+                <li>Instant in response</li>
+                <li>Accurate with data</li>
+                <li>Scalable for future use</li>
+            </ul>
+
+            <p>
+                This project reflects my goal of combining programming with real-world impact —
+                building something useful, practical, and scalable.
+            </p>
+
+            <!-- HOW IT WORKS -->
+            <div class="section-title">⚙️ How It Works (Deep Explanation)</div>
+
+            <p>
+                The chatbot follows a multi-layer AI architecture:
+            </p>
+
+            <div class="out">
+                1️⃣ User sends query <br>
+                2️⃣ System checks Local Knowledge (RAG) <br>
+                3️⃣ If matched → instant answer <br>
+                4️⃣ If not → Gemini AI generates response <br>
+                5️⃣ If AI fails → fallback message <br>
+                6️⃣ If still unclear → Ask Admin option <br>
+            </div>
+
+            <div class="flow-step">
+                <b style="font-size: 35px;">Example:</b><br>
+                User asks: "What is the hostel fee?"<br><br>
+
+                ✔ Step 1 → Local RAG detects keyword "hostel fee"<br>
+                ✔ Step 2 → Direct answer returned instantly<br><br>
+
+                User asks: "Explain biotechnology research scope"<br><br>
+
+                ✔ Step 1 → No exact match<br>
+                ✔ Step 2 → Gemini AI generates smart answer<br><br>
+
+                User asks something unknown:<br><br>
+
+                ✔ Step 3 → System suggests "Ask Admin"
+            </div>
+
+            <!-- FLOW -->
+            <div class="section-title">🔄 System Flow</div>
+
+            <div class="output">
+                User Query → Pattern Match → AI Processing → Response → Admin Escalation
+            </div>
+
+            <p>
+                Each step ensures the system never fails silently and always provides
+                some form of useful response.
+            </p>
+
+            <!-- FEATURES -->
+            <div class="section-title">✨ Key Features (Detailed)</div>
+
+            <div class="features">
+
+                <div class="feature-box">
+                    <b>🔐 Authentication System</b><br>
+                    Secure login & registration with password hashing.
+                </div>
+
+                <div class="feature-box">
+                    <b>🤖 AI Chatbot</b><br>
+                    Handles dynamic queries using hybrid intelligence.
+                </div>
+
+                <div class="feature-box">
+                    <b>⚡ Local RAG Engine</b><br>
+                    Instant responses without API usage.
+                </div>
+
+                <div class="feature-box">
+                    <b>🌐 Gemini AI Integration</b><br>
+                    Advanced natural language answers.
+                </div>
+
+                <div class="feature-box">
+                    <b>📩 Ask Admin Feature</b><br>
+                    User queries stored and answered later.
+                </div>
+
+                <div class="feature-box">
+                    <b>📊 Admin Dashboard</b><br>
+                    Manage queries, users, and responses.
+                </div>
+
+                <div class="feature-box">
+                    <b>💾 SQLite Database</b><br>
+                    Persistent storage for users & queries.
+                </div>
+
+            </div>
+
+            <!-- TECHNOLOGIES -->
+            <div class="section-title">🛠 Technologies Used</div>
+
+            <p>
+                🔹 <b>Backend:</b> Flask (Python Web Framework)<br>
+                🔹 <b>Database:</b> SQLite<br>
+                🔹 <b>AI:</b> Gemini API + Custom RAG<br>
+                🔹 <b>Frontend:</b> HTML, CSS, JavaScript<br>
+                🔹 <b>Security:</b> Password Hashing (SHA256)<br>
+                🔹 <b>Architecture:</b> Modular + Scalable Design
+            </p>
+
+            <!-- LEARNING -->
+            <div class="section-title">📚 What I Learned</div>
+
+            <p>
+                This project gave me deep exposure to real-world software engineering:
+            </p>
+
+            <ul class="out" style="max-width: 41.15%;padding-left: 45px;">
+                <li>Designing scalable backend systems</li>
+                <li>Integrating AI with applications</li>
+                <li>Building secure authentication systems</li>
+                <li>Handling databases and queries</li>
+                <li>Creating user-friendly interfaces</li>
+                <li>Understanding system architecture and flow</li>
+            </ul>
+
+            <p>
+                Most importantly, I learned how to transform a real-life problem into
+                a working digital solution — which is the core of software development.
+            </p>
+
+            <!-- IMAGES -->
+            <div class="section-title"> Reference </div>
+
+            <div class="images">
+                <video style="align-items: center;" controls height="510" autoplay muted loop>
+                    <source src="images/CampusAssist.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <a href="https://github.com/sandhiya334/Campus-Assistant" target="_blank" class="btn">
+                View Source Code →
+            </a>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

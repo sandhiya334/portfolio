@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhiya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/LogoC.jpeg" type="image/x-icon">
+</head>
+
+<body>
+
+    <section class="hero">
+        <header>
+            <img id="logo" src="images/Logo.jpeg" alt="logo" height="90px">
+            <nav id="Navi">
+                <ul class="nav-links">
+                    <a href="#AboutH">Home</a>
+                    <a href="#Education">Education</a>
+                    <a href="#Projects">Projects</a>
+                    <a href="#Experiance">Experience</a>
+                    <a href="#footer">Contact</a>
+                </ul>
+            </nav>
+        </header>
+        <div id="AboutH">
+            <p class="greeting">Hello, I'm</p>
+            <h1 id="NameH">SANDHIYA RAVIKUMAR</h1>
+            <p id="DisH">MCA Final Year Student <br> <br>
+                <button id="AboutMe"> <a href="#" onclick="openAbout()">About Me</a></button>
+        </div>
+        <div id="aboutPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeAbout()">&times;</span>
+                <h2>About Me <a id="resume" href="resume.pdf" class="btn btn-primary" download>
+                        Download CV
+                    </a> </h2>
+
+                <p>
+                    I'm Sandhiya Ravikumar Currently pursuing my Master of Computer Applications (MCA) in Anna
+                    University Trichy, I have developed a solid foundation in
+                    programming, data structures, and modern web technologies. During my internship, I worked on
+                    building AI-powered chatbot systems that improved response accuracy
+                    and handled real-time data efficiently.Apart from AI/ML, I enjoy working on Java development and
+                    creating responsive web applications with
+                    clean and user-friendly interfaces.I continuously explore new technologies and focus on writing
+                    efficient, maintainable code.
+                </p>
+                <p>
+                    I am currently seeking opportunities where I can contribute my skills, learn from real-world
+                    projects,
+                    and grow as a software developer.
+
+                </p>
+                <img id="skillL" src="images/SkillL.png" alt="skills" height="380px">
+
+            </div>
+        </div>
+        <div id="contact">
+            <a id="insta" href="https://instagram.com/_philo_._phile_" target="_blank"><img src="images/InsL.png"
+                    alt="insta" height="37px"></a><br><br><br>
+            <a id="linkedin" href="https://linkedin.com/in/sandhiya-kr" target="_blank"><img src="images/LinkL.jpeg"
+                    alt="linkedin" height="39px"></a><br><br><br>
+            <a id="github" href="https://github.com/sandhiya334" target="_blank"><img src="images/GitL.jpeg"
+                    alt="github" height="40px"></a><br><br><br>
+            <a id="mailto" href="mailto:sandhiyakr334@gmail.com"><img src="images/mail.jpeg" alt="whatsapp"
+                    height="33px"></a>
+        </div>
+
+
+
+    </section>
+    <section id="Experiance">
+        <h2 style="font-size: 40px;padding-top: 15px;text-align: center;">EXPERIENCE</h2>
+        <p style="font-size: 25px;margin-top: 15px; text-align: center;">Internship</p>
+        <div class="intern-container">
+            <div class="intern" id="techm">
+                <h3 style="padding-bottom: 10px;">AI/ML AGENT BUILDING</h5>
+                    <h6> <a style="text-decoration: none;color: black; padding-left: 50px;"
+                            href="https://www.techmahindra.com/" target="_blank">- Tech Mahindra</a> (Sholinganallur
+                        ELCOT, chennai)</h6>
+                    <p style="text-align: justify; padding-top: 10px;">
+                        From January 2026 to March 2026, I worked as an AI/ML Intern at Tech Mahindra,
+                        where I focused on building intelligent applications using modern AI techniques.
+                        During this period, I developed a RAG-based chatbot system, "Campus Assist",
+                        designed to improve response accuracy by combining large language models with efficient data
+                        retrieval.
+                        I also worked with Natural Language Processing (NLP) tools and frameworks to process and analyze
+                        user
+                        queries,
+                        and gained exposure to real-time data handling concepts.
+                        This internship strengthened my understanding of AI system design, backend integration, and
+                        practical
+                        implementation of machine learning concepts in real-world scenarios.
+                    </p>
+            </div>
+            <div class="intern" id="ino">
+                <h3 style="padding-bottom: 10px;">WEB APPLICATION DEVELOPMENT</h5>
+                    <h6><a style="text-decoration: none;color: black; padding-left: 50px;"
+                            href="https://www.inoverainfotech.com/" target="_blank">-Inovera Info Tech</a> (Pammal,
+                        Chennai)</h6>
+                    <p style="text-align: justify; padding-top: 10px;">
+                        During May 2023, I completed a Web Development internship at Inovera InfoTech,
+                        where I gained hands-on experience in building responsive web applications using HTML, CSS, and
+                        JavaScript.
+                        Throughout the internship, I developed several small-scale web pages to strengthen my front-end
+                        development skills.
+                        One of my key projects was the "7 Wonders" website, where I focused on creating a visually
+                        appealing
+                        and
+                        mobile-friendly design.
+                        This experience helped me understand real-world web development practices, improve my UI design
+                        skills,
+                        and build a strong foundation in front-end technologies.
+                    </p><br>
+                    <p> <b> PROJECT : </b><a style="text-decoration: none;color: black;"
+                            href="https://sandhiya334.github.io/7-Wonders/"> 7-Wonders</a> </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="Projects">
+        <h2 style="font-size: 50px;padding-top: 20px; text-align: center;">PROJECTS</h2>
+
+        <div class="project-container">
+
+            <!-- Campus Assist -->
+            <a class="project" id="CA" href="CA.html">
+                <h5>Campus Assist</h5>
+                <p>AI chatbot using RAG and NLP techniques to provide accurate responses.</p>
+            </a>
+            </a>
+
+            <!-- Java Core -->
+            <a class="project" id="CORE" href="java-core.html">
+                <h5>Java Core </h5>
+                <p>Collection of programs covering arrays, loops, conditions and functions.</p>
+            </a>
+
+            <!-- OOP -->
+            <a class="project" id="OOP" href="Oops.html">
+                <h5>OOPs Systems</h5>
+                <p>Implemented banking and payroll systems using OOP concepts.</p>
+            </a>
+
+            <!-- 7 Wonders -->
+            <a class="project" id="WON" href="Wonder.html">
+                <h5>7 Wonders Website</h5>
+                <p>Responsive website built using HTML, CSS and JavaScript.</p>
+            </a>
+
+        </div>
+
+    </section>
+    <section id="Education">
+        <h2 style="font-size: 50px;padding-bottom: 30px; text-align: center;">EDUCATION</h2>
+
+        <div class="timeline">
+
+            <div class="edu-item left">
+                <h4>2024 – 2026</h4>
+                <h5>MCA</h5>
+                <p>Anna University, Trichy (BIT Campus)</p>
+                <span>CGPA: 8.11</span>
+            </div>
+
+            <div class="edu-item right">
+                <h4>2021 – 2024</h4>
+                <h5>BCA</h5>
+                <p>M.O.P Vaishnav College for Women</p>
+                <span>CGPA: 7.5</span>
+            </div>
+
+            <div class="edu-item left">
+                <h4>2020 – 2021</h4>
+                <h5>HSC</h5>
+                <p>Nadar Sangha Hr. Sec. School</p>
+                <span>83.1%</span>
+            </div>
+
+            <div class="edu-item right">
+                <h4>2018 – 2019</h4>
+                <h5>SSLC</h5>
+                <p>Nadar Sangha Hr. Sec. School</p>
+                <span>75.4%</span>
+            </div>
+
+        </div>
+
+ </section>
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a style="text-decoration: none; color: rgb(167, 255, 167); font-size: 20px;"
+                            href="#AboutH">Sandhiya RaviKumar</a>
+                        <p style="font-size: 15px; margin-top: 10px; margin-bottom: 10px;">Frontend Developer crafting
+                            digital experiences.</p>
+
+                        <div style="margin-bottom: 5px;" class="social-links">
+                            <a href="https://instagram.com/_philo_._phile_" target="_blank"><img src="images/InsL.png"
+                                    alt="insta"></a>
+                            <a href="https://linkedin.com/in/sandhiya-kr" target="_blank"><img src="images/LinkL.jpeg"
+                                    alt="linkedin"></a>
+                            <a href="https://github.com/sandhiya334" target="_blank"><img src="images/GitL.jpeg"
+                                    alt="github"></a>
+                            <a href="mailto:sandhiyakr334@gmail.com"><img src="images/mail.jpeg" alt="mail"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Sandhiya. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+   
+    <script>
+        function openAbout() {
+            document.getElementById("aboutPopup").style.display = "block";
+        }
+
+        function closeAbout() {
+            document.getElementById("aboutPopup").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

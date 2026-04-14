@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandhiya Ravikumar</title>
+    <link rel="shortcut icon" href="images/LogoC.jpeg" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: black;
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url("images/WonderBG.jpg") no-repeat center center/cover;
+            color: white;
+            margin: 0px;
+        }
+
+        .hero h1 {
+            font-size: 7rem;
+            font-family: cursive;
+            color: black;
+            text-align: center;
+            margin-top: 0px;
+            padding-top: 380px;
+        }
+
+        .hero:hover h1 {
+            font-size: 7.03rem;
+            text-shadow: 3px 2px 5px hsla(0, 100%, 50%, 0.726);
+        }
+
+        .hero p {
+            color: #000000;
+            text-align: center;
+            font-size: 20px;
+            margin-top: -70px;
+            font-style: italic;
+            font-weight: bold;
+            font-family: serif;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            border: 1px solid white;
+            background-color: #000000;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 0%;
+            
+        }
+        .btn:hover{
+            background-color: rgb(255, 255, 255);
+            color: black;
+            transition: .6s;
+            
+        }
+        /* BACK */
+        .back {
+            color: black;
+            float: right;
+            top: 20px;
+            padding-right: 10px;
+            cursor: pointer;
+        }
+
+        .back:hover {
+            font-size: 15.5px;
+            font-weight: bold;
+        }
+        #theP{
+            margin-top: 100px;
+            margin-bottom: 0%;
+            text-align: center;
+        }
+        #theP h2{
+            font-size: 60px;
+            font-family: serif;
+        }
+        #theP p{
+            text-align: justify;
+            padding-left: 25%;
+            padding-right: 25%;
+            font-size: 14px;
+            line-height: .7cm;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .SW{
+           font-size: 130px; 
+           margin-top: 0%;
+           margin-bottom: 12px;
+           margin-left: 30px;
+           opacity: 6%;
+           font-family:serif;
+           float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back" onclick="history.back()">⬅ Back To Project Section</div>
+
+    <section class="hero">
+
+        <h1>7 Wonders</h1>
+        <p>Web Application Project </p>
+    </section>
+    <section id="theP">
+        <h2>The Project</h2>
+        <p>
+
+            The "7 Wonders" project is a responsive website built using HTML, CSS, and JavaScript to showcase the Seven
+            Wonders of the World.
+            It features a clean UI, mobile-friendly design, and structured content layout, ensuring a seamless
+            experience across devices.
+            This project highlights my skills in front-end development, responsive design, and user interface creation.
+            This project helped strengthen my front-end development skills, particularly in responsive design, layout
+            structuring, and creating interactive web pages.
+            It also reflects my ability to build real-world web applications with a balance of design and functionality.
+        </p>
+
+        <button class="btn" onclick="openSite()">Visit Website</button>
+        
+        
+        </section>
+
+    <p class="SW">7- Wonders </p>
+    <script>
+        function openSite() {
+            window.open("https://sandhiya334.github.io/7-Wonders/", "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
