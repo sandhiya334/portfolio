@@ -7,12 +7,10 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    /* Side scroll-ah thadukka */
 }
 
 body {
     background-color: #000;
-    /* Main black background */
     color: #fff;
 }
 
@@ -23,7 +21,6 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Translucent black */
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -58,13 +55,28 @@ header {
     color: #ff639c;
 }
 
+/* Hamburger Menu (hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
 .hero {
     height: 100vh;
     background: url("images/homeBG.jpeg") no-repeat center center/cover;
     color: white;
     margin: 0px;
 }
-
 
 body::selection {
     color: rgb(6, 11, 79);
@@ -73,7 +85,6 @@ body::selection {
 
 body {
     background-color: rgb(0, 0, 0);
-
 }
 
 .greeting {
@@ -130,7 +141,6 @@ body {
 
 #AboutMe:hover {
     background: linear-gradient(to right, rgb(100, 133, 240), rgb(7, 27, 244), rgb(60, 105, 252));
-
 }
 
 #contact {
@@ -153,7 +163,7 @@ body {
 #linkedin:hover,
 #github:hover,
 #mailto:hover {
-    opacity: 1010%;
+    opacity: 100%;
 }
 
 /* POPUP BACKGROUND */
@@ -237,7 +247,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 50px;
-    height: 500px;
+    height: auto;
     margin-top: 30px;
 }
 
@@ -266,6 +276,7 @@ body {
     position: relative;
     overflow: hidden;
     text-decoration: none;
+    min-height: 200px;
 }
 
 .project:hover h5,
@@ -273,88 +284,90 @@ body {
     opacity: 0;
 }
 
-/* overlay color */
 #CORE:hover {
     background-image: url(images/javaBG.jpg);
-    background-size: cover;        /* 🔥 important */
-    background-position: center;   /* 🔥 important */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     transition: 1.5s;
 }
 
-#WON:hover{
+#WON:hover {
     background: url(images/WonderBG.jpg);
-    background-size: cover;        /* 🔥 important */
-    background-position: center;   /* 🔥 important */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     transition: 2.5s;
 }
-#OOP:hover{
+
+#OOP:hover {
     background: url(images/oopsBG.jpeg);
-    background-size: cover;        /* 🔥 important */
-    background-position: center;   /* 🔥 important */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     transition: 1.5s;
+}
 
-}
-#OOP::after{
+#OOP::after {
     color: black;
-    left:60px;
+    left: 60px;
 }
-#WON::after{
+
+#WON::after {
     color: black;
+    left: 60px;
 }
-#CA:hover{
+
+#CA:hover {
     background: url(images/botBG.jpg);
-    background-size: cover;        /* 🔥 important */
-    background-position: center;   /* 🔥 important */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     transition: 2.5s;
 }
-
-#CORE::after{
+#CA::after{
+    
+    left: 60px;
+}
+#CORE::after {
     color: white;
+    left: 60px;
 }
 
-
-/* number */
 .project::after {
     position: absolute;
     font-size: 100px;
     font-weight: bold;
     top: 50%;
+    left: 60px;
     color: white;
     transform: translateY(-50%);
     display: none;
 }
-/* numbers */
+
 .project:nth-child(1)::after { content: "01"; }
 .project:nth-child(2)::after { content: "02"; }
 .project:nth-child(3)::after { content: "03"; }
 .project:nth-child(4)::after { content: "04"; }
 
-/* alternate positions */
 .project:nth-child(odd)::after {
-    left: 60px;
+    
     color: black;
 }
 
 .project:nth-child(even)::after {
     left: 20px;
     color: #000;
-    
 }
 
-/* show on hover */
 .project:hover::after {
     display: block;
 }
 
-/* --- 5. Education (Fixing the Visibility) --- */
+/* --- 5. Education --- */
 #Education {
-    padding:70px ;
+    padding: 70px;
     background-color: #1f1a3766;
-    /* Dark gray to make text readable */
     color: #fff;
 }
 
@@ -414,22 +427,20 @@ body {
     left: -8px;
 }
 
-/* --- 6. Full Width Footer Fix --- */
+/* --- 6. Footer --- */
 .footer {
     background-color: #000000;
-    /* Dark greenish-black */
     color: #fff;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    /* Centers full width element */
-    padding: 20px ;
+    padding: 20px;
     text-align: center;
-    
 }
-#footH{
-    text-decoration: none;
 
+#footH {
+    text-decoration: none;
 }
+
 .footer .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -445,7 +456,6 @@ body {
 .social-links a img {
     height: 35px;
     filter: brightness(.1) invert(1);
-    /* Makes icons white */
     transition: 0.3s;
 }
 
@@ -462,10 +472,164 @@ body {
     opacity: 0.3;
 }
 
-/* --- Mobile Responsive --- */
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet View (768px and below) */
 @media (max-width: 768px) {
+    
+    /* Header & Navigation */
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        background: none;
+        background-color: #000;
+        padding: 100px 20px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #AboutH {
+       float: none;
+        margin: 0 auto;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        max-width: 90%;
+    }
+
     #NameH {
-        font-size: 40px;
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    #DisH {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    #AboutMe {
+        margin: 15px auto;
+        display: inline-block;
+        padding: 12px 25px;
+    }
+
+    /* Contact Icons */
+    #contact {
+        float: none;
+        margin: 40px auto 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        opacity: 70%;
+        position: static;
+    }
+
+   
+
+    /* Popup */
+    .popup-content {
+        width: 90%;
+        height: auto;
+        max-height: 80vh;
+        padding: 20px;
+        margin: 15% auto;
+        overflow-y: auto;
+    }
+
+    .popup-content p {
+        float: none;
+        margin-right: 0;
+    }
+
+    #skillL {
+        float: none;
+        margin: 20px auto;
+        display: block;
+        max-width: 100%;
+    }
+
+    #resume {
+        margin-left: 0;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    /* Experience & Projects */
+    #Experiance,
+    #Projects {
+        padding: 50px 5%;
+    }
+
+    .intern-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    .project-container h5 {
+        font-size: 24px;
+    }
+
+    .project::after {
+        font-size: 60px;
+    }
+
+    .project:nth-child(odd)::after,
+    .project:nth-child(even)::after {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Education Timeline */
+    #Education {
+        padding: 50px 20px;
     }
 
     .timeline::before {
@@ -476,19 +640,162 @@ body {
         width: 100%;
         left: 0 !important;
         text-align: left !important;
-        padding-left: 45px;
+        padding-left: 50px;
+        padding-right: 15px;
     }
 
     .edu-item::before {
         left: 12px !important;
+        right: auto !important;
     }
 
+    .edu-item h5 {
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .social-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .social-links a img {
+        height: 28px;
+    }
+}
+
+/* Small Mobile View (480px and below) */
+@media (max-width: 480px) {
+
+    /* Header */
     header {
-        flex-direction: column;
-        padding: 15px;
+        padding: 8px 10px;
     }
 
-    .nav-links {
-        margin-top: 10px;
+    #logo {
+        height: 35px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Hero */
+    .hero {
+       padding: 90px 15px 50px;
+        min-height: 100vh;
+        background: none;
+        background-color: #000;
+    }
+
+    #AboutH {
+        max-width: 95%;
+    }
+
+    #NameH {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    #NameH::first-letter {
+        font-size: 1.3em;
+    }
+
+    #DisH {
+       font-size: 14px;
+        margin-top: 12px;
+        line-height: 1.5;
+    }
+
+    #AboutMe {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 15px auto;
+    }
+    /* Popup */
+    .popup-content {
+        width: 95%;
+        padding: 15px;
+        margin: 20% auto;
+        border-radius: 1em;
+    }
+
+    .close {
+        font-size: 28px;
+        right: 15px;
+        top: 8px;
+    }
+
+    /* Sections */
+    #Experiance,
+    #Projects {
+        padding: 40px 4%;
+    }
+
+    .intern,
+    .project {
+        padding: 20px 15px;
+    }
+
+    .project-container h5 {
+        font-size: 20px;
+    }
+
+    .project::after {
+        font-size: 45px;
+    }
+
+    /* Education */
+    #Education {
+        padding: 40px 15px;
+    }
+
+    .edu-item {
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+
+    .edu-item h5 {
+        font-size: 18px;
+    }
+
+    .edu-item p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-bottom {
+        font-size: 12px;
+    }
+
+    .social-links a img {
+        height: 24px;
+    }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+
+   .hero {
+        padding: 80px 12px 40px;
+    }
+    #NameH {
+        font-size: 26px;
+    }
+    #DisH {
+        font-size: 13px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intern-container {
+        grid-template-columns: 1fr;
     }
 }
