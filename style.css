@@ -291,7 +291,13 @@ body {
     background-repeat: no-repeat;
     transition: 1.5s;
 }
-
+#FIG:hover {
+    background: url(images/UI-Vs-UX.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 2.5s;
+}
 #WON:hover {
     background: url(images/WonderBG.jpg);
     background-size: cover;
@@ -317,6 +323,10 @@ body {
     color: black;
     left: 60px;
 }
+#FIG::after {
+    color: black;
+    left: 60px;
+}
 
 #CA:hover {
     background: url(images/botBG.jpg);
@@ -339,7 +349,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     top: 50%;
-    left: 60px;
+    left: 50px;
     color: white;
     transform: translateY(-50%);
     display: none;
@@ -349,6 +359,8 @@ body {
 .project:nth-child(2)::after { content: "02"; }
 .project:nth-child(3)::after { content: "03"; }
 .project:nth-child(4)::after { content: "04"; }
+.project:nth-child(5)::after { content: "05"; }
+
 
 .project:nth-child(odd)::after {
     
